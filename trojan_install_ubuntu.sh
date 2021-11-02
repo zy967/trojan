@@ -71,6 +71,7 @@ EOF
 systemctl restart nginx.service
 
 curl https://get.acme.sh | sh
+~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
 ~/.acme.sh/acme.sh  --issue  -d $domain  --webroot /usr/share/nginx/html/
 
 ~/.acme.sh/acme.sh  --installcert  -d  $domain   \
