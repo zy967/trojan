@@ -18,12 +18,15 @@ VERSION=$VERSION_ID
 if [ "$RELEASE" == "centos" ]; then
     release="centos"
     systemPackage="yum"
+    green "Centos"
 elif [ "$RELEASE" == "debian" ]; then
     release="debian"
     systemPackage="apt-get"
+    green "Debian"
 elif [ "$RELEASE" == "ubuntu" ]; then
     release="ubuntu"
     systemPackage="apt-get"
+    green "Ubuntu"
 fi
 systempwd="/etc/systemd/system/"
 
